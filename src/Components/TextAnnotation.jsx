@@ -23,9 +23,11 @@ function LabelStudioUI({ imageLocation, onClick }) {
         "controls",
         "side-column",
         "annotations:menu",
+        "annotations:add-new",
+        "annotations:delete",
+        "predictions:menu",
         "topbar",
         "edit-history",
-
       ],
       user: {
         pk: 1,
