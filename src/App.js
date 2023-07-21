@@ -7,7 +7,7 @@ import TextAnnotation from './Components/TextAnnotation';
 function App() {
   return (
     <div>
-      <h1>Nobert Text Annotation App</h1>
+      <h1>Text Annotation App</h1>
       {/* <LabelStudioWrapper/> */}
       <TextAnnotation/>
       {/* <FinalApp/> */}
