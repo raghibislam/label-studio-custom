@@ -9,7 +9,7 @@ const labelConfig = `<View>
   <Label value="LOC" background="orange"/>
   <Label value="MISC" background="green"/>
 </Labels>
-<Text name="text" value="This is example text for annotation."/>
+<Text name="text" value="This is componenet"/>
 </View>`;
 
 function LabelStudioUI({ imageLocation, onClick }) {
@@ -18,16 +18,23 @@ function LabelStudioUI({ imageLocation, onClick }) {
       config: labelConfig,
       interfaces: [
         "panel",
+        "skip",
         "update",
         "submit",
+        "infobar",
         "controls",
+        "instruction",
         "side-column",
         "annotations:menu",
         "annotations:add-new",
         "annotations:delete",
-        "predictions:menu",
         "topbar",
         "edit-history",
+        "annotations:history",
+        "annotations:tabs",
+        "annotations:current ",
+        "annotations:view-all",
+        "auto-annotation",
       ],
       user: {
         pk: 1,
@@ -39,7 +46,7 @@ function LabelStudioUI({ imageLocation, onClick }) {
         predictions: [],
         id: 1,
         data: {
-          image: '',
+          "Text": 'This is the same componenet',
         },
       },
       onLabelStudioLoad: function (LS) {
@@ -55,11 +62,11 @@ function LabelStudioUI({ imageLocation, onClick }) {
         console.log(annotation.serializeAnnotation());
       },
     });
-  }, [imageLocation]); // Close the dependency array with a closing square bracket
+  }, [imageLocation]);
 
   return (
     <div>
-      <div id="label-studio" style={{ height: "500px" }}></div>
+      <div id="label-studio" style={{ height: "100px" }}></div>
     </div>
   );
 }
